@@ -1,0 +1,44 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.body-login {
+  min-height: 100vh;
+  /* background-image: url('../images/fundo_login.png'); */
+  background-position-x: 1345px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 20px!important;
+}
+
+.logo {
+  height: 180px;
+  width: 180px;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.title-login {
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.title-cadastro {
+  margin-bottom: 160px;
+  text-align: center;
+}
+
+.footer-login {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
