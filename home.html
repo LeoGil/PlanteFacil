@@ -19,55 +19,11 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="menu">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Plante Fácil
-          </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="index.html">Sair</a>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <script src="navbar.js"></script>
   <!-- Page Content -->
   <div class="container">
 
     <div class="row">
-
-      <!-- <div class="col-lg-3">
-
-        <h1 class="my-4">Shop Name</h1>
-        <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
-        </div>
-
-      </div> -->
-      <!-- /.col-lg-3 -->
 
       <div class="col-lg-12">
 
@@ -101,85 +57,115 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card h-100 border border-secondary">
+              <a href="#"><img class="card-img-top" data-toggle="modal" data-target="#modalExemplo"
+                  src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
+                <h4 class="card-title float-left">
+                  <a href="#" class="text-secondary" data-toggle="modal" data-target="#modalExemplo">Item One</a>
                 </h4>
-                <h5>R$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                </p>
+                <span class="badge badge-pill badge-secondary float-right">100 pontos</span>
+                <div class="float-left">
+                  <h5>R$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                    aspernatur!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card h-100 border border-warning">
+              <a href="#"><img class="card-img-top" data-toggle="modal" data-target="#modalExemplo"
+                  src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Two</a>
+                <h4 class="card-title float-left">
+                  <a href="#" class="text-warning" data-toggle="modal" data-target="#modalExemplo">Item Two</a>
                 </h4>
-                <h5>R$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                  Lorem ipsum dolor sit amet.</p>
+                <span class="badge badge-pill badge-warning float-right">500 pontos</span>
+                <div class="float-left">
+                  <h5>R$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                    aspernatur!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card h-100 border border-secondary">
+              <a href="#"><img class="card-img-top" data-toggle="modal" data-target="#modalExemplo"
+                  src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Three</a>
+                <h4 class="card-title float-left">
+                  <a href="#" class="text-secondary" data-toggle="modal" data-target="#modalExemplo">Item Three</a>
                 </h4>
-                <h5>R$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                </p>
+                <span class="badge badge-pill badge-secondary float-right">100 pontos</span>
+                <div class="float-left">
+                  <h5>R$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                    aspernatur!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card h-100 border border-danger">
+              <a href="#"><img class="card-img-top" data-toggle="modal" data-target="#modalExemplo"
+                  src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Four</a>
+                <h4 class="card-title float-left">
+                  <a href="#" class="text-danger" data-toggle="modal" data-target="#modalExemplo">Item Four</a>
                 </h4>
-                <h5>R$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                </p>
+                <span class="badge badge-pill badge-danger float-right">1000 pontos</span>
+                <div class="float-left">
+                  <h5>R$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                    aspernatur!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card h-100 border border-secondary">
+              <a href="#"><img class="card-img-top" data-toggle="modal" data-target="#modalExemplo"
+                  src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Five</a>
+                <h4 class="card-title float-left">
+                  <a href="#" class="text-secondary" data-toggle="modal" data-target="#modalExemplo">Item Five</a>
                 </h4>
-                <h5>R$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                  Lorem ipsum dolor sit amet.</p>
+                <span class="badge badge-pill badge-secondary float-right">100 pontos</span>
+                <div class="float-left">
+                  <h5>R$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                    aspernatur!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card h-100 border border-warning">
+              <a href="#"><img class="card-img-top" data-toggle="modal" data-target="#modalExemplo"
+                  src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Six</a>
+                <h4 class="card-title float-left">
+                  <a href="#" class="text-warning" data-toggle="modal" data-target="#modalExemplo">Item Six</a>
                 </h4>
-                <h5>R$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                </p>
+                <span class="badge badge-pill badge-warning float-right">500 pontos</span>
+                <div class="float-left">
+                  <h5>R$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                    aspernatur!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -207,6 +193,27 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Compar árvore</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
