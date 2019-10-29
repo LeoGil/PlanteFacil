@@ -1,4 +1,4 @@
-document.write('<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="menu">' +
+document.write('<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav-plante-facil" id="menu">' +
     '<div class="container">' +
     '<a class="navbar-brand" href="home.html">' +
     '<img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">' +
