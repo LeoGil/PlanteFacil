@@ -3,7 +3,7 @@
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="iso88591">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="">
@@ -109,7 +109,7 @@
 
     $(document).ready(function () {
 
-        function limpa_formulário_cep() {
+        function limpa_formulario_cep() {
             // Limpa valores do formulário de cep.
             $("#inputAddress").val("");
             $("#inputCity").val("");
@@ -147,20 +147,20 @@
                         } //end if.
                         else {
                             //CEP pesquisado não foi encontrado.
-                            limpa_formulário_cep();
+                            limpa_formulario_cep();
                             alert("CEP não encontrado.");
                         }
                     });
                 } //end if.
                 else {
                     //cep é inválido.
-                    limpa_formulário_cep();
+                    limpa_formulario_cep();
                     alert("Formato de CEP inválido.");
                 }
             } //end if.
             else {
                 //cep sem valor, limpa formulário.
-                limpa_formulário_cep();
+                limpa_formulario_cep();
             }
         });
     });
