@@ -253,6 +253,12 @@
 
     $('#span_saldo').html(localStorage.saldo)
   })
-  localStorage.setItem('saldo', 10000)
-  $('#span_saldo').html(localStorage.saldo)
+
+  if (localStorage.saldo == undefined) {
+    $('#span_saldo').html(0)
+  } else {
+    $('#span_saldo').html(localStorage.saldo)
+  }
+  // localStorage.setItem('saldo', 10000)
+  // $('#span_saldo').html(localStorage.saldo)
 </script>
