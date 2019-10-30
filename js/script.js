@@ -1,9 +1,9 @@
-$('#btn_comprar').click(function () {
+var comprar_arvore = function (valor) {
     if (localStorage.saldo == undefined) {
-        localStorage.setItem('saldo', 1000)
+        localStorage.setItem('saldo', 0)
     } else {
-        localStorage.setItem('saldo', parseInt(localStorage.saldo) + parseInt(1000))
+        localStorage.setItem('saldo', parseInt(localStorage.saldo) + parseInt(valor))
     }
 
     $('#span_saldo').html(localStorage.saldo)
-})
+}

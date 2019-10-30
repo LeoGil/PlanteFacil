@@ -13,7 +13,7 @@ document.write(`
     <a class="nav-link navbar-brand" href="cupons.html"><b>Seu saldo: <span class="badge badge-pill badge-success"><span id="span_saldo"></span></span></b></a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Sobre nós</a>
+    <a class="nav-link" href="cupons.html">Cupons</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="#">Nossa idéia</a>
