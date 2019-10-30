@@ -3,7 +3,7 @@
 
 <head>
 
-  <meta charset="iso88591">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -249,8 +249,10 @@
 </html>
 <script src="js/script.js"></script>
 <script>
+
   if (localStorage.saldo == undefined) {
-    $('#span_saldo').html(0)
+    localStorage.setItem(saldo, 0)
+    $('#span_saldo').html(localStorage.saldo)
   } else {
     $('#span_saldo').html(localStorage.saldo)
   }
