@@ -50,3 +50,10 @@ body {
 .nav-plante-facil {
   background-color: white!important;
 }
+
+.cupom-link-image {
+  height: 261px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
