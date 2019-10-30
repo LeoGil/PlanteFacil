@@ -19,10 +19,10 @@ document.write(`
     <a class="nav-link" href="cupons.html">Cupons</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Nossa idéia</a>
+    <a class="nav-link" href="sobre_nos.html">Nossa idéia</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Contato</a>
+    <a class="nav-link" href="contato.html">Contato</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="index.html">Sair</a>

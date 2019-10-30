@@ -7,8 +7,33 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 body {
   padding-top: 56px;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+.container-contato {
+  margin-top: 170px!important;
+}
+
+.body-contato {
+  background-image: url('../images/fundo_teste.png');
+  background-position-x: 1345px;
+  background-position-y: 75px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container-cupom {
+  margin-top: 35px;
 }
 
 .body-login {
