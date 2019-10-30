@@ -105,14 +105,21 @@
 
         var popup = L.popup();
 
-        function onMapClick(e) {
-            popup
-                .setLatLng(e.latlng)
-                .setContent("You clicked the map at " + e.latlng.toString())
-                .openOn(mymap);
-        }
+        // function onMapClick(e) {
+        //     popup
+        //         .setLatLng(e.latlng)
+        //         .setContent("You clicked the map at " + e.latlng.toString())
+        //         .openOn(mymap);
+        // }
 
-        mymap.on('click', onMapClick);
+        // mymap.on('click', onMapClick);
+
+        if (localStorage.saldo == undefined) {
+            localStorage.setItem('saldo', 0)
+            $('#span_saldo').html(localStorage.saldo)
+        } else {
+            $('#span_saldo').html(localStorage.saldo)
+        }
     </script>
 
 

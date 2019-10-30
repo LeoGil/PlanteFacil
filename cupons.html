@@ -249,9 +249,13 @@
 </html>
 <script>
   $('#btn_resgatar').click(function () {
-    localStorage.setItem('saldo', parseInt(localStorage.saldo) - parseInt(1000))
+    if (localStorage.saldo >= 1000) {
+      localStorage.setItem('saldo', parseInt(localStorage.saldo) - parseInt(1000))
 
-    $('#span_saldo').html(localStorage.saldo)
+      $('#span_saldo').html(localStorage.saldo)
+    } else {
+      alert('Você não possuí pontos sulficientes')
+    }
   })
 
   if (localStorage.saldo == undefined) {
