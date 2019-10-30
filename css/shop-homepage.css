@@ -3,6 +3,10 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 body {
   padding-top: 56px;
 }
@@ -10,10 +14,22 @@ body {
 .body-login {
   min-height: 100vh;
   /* background-image: url('../images/fundo_login.png'); */
-  background-position-x: 1345px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-top: 20px!important;
+  /* background-position-x: 1345px; */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  /* padding-top: 20px!important; */
+  background-image: url(../images/fundo.jpg);
+}
+
+.body-login .card {
+  background-color: rgba(255,255,255,0.7);
+}
+
+.panel-login {
+  margin-top: 190px;
+}
+.row-cadastro {
+  margin-top: 130px;
 }
 
 .logo {
@@ -48,7 +64,7 @@ body {
 }
 
 .nav-plante-facil {
-  background-color: white!important;
+  background-color: #c2f0c2!important;
 }
 
 .cupom-link-image {
