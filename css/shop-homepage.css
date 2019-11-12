@@ -1,0 +1,102 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  padding-top: 56px;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+.container-contato {
+  margin-top: 170px!important;
+}
+
+.body-contato {
+  background-image: url('../images/fundo_teste.png');
+  background-position-x: 1345px;
+  background-position-y: 75px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container-cupom {
+  margin-top: 35px;
+}
+
+.body-login {
+  min-height: 100vh;
+  /* background-image: url('../images/fundo_login.png'); */
+  /* background-position-x: 1345px; */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  /* padding-top: 20px!important; */
+  background-image: url(../images/fundo.jpg);
+}
+
+.body-login .card {
+  background-color: rgba(255,255,255,0.7);
+}
+
+.panel-login {
+  margin-top: 190px;
+}
+.row-cadastro {
+  margin-top: 130px;
+}
+
+.logo {
+  height: 180px;
+  width: 180px;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.title-login {
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.title-cadastro {
+  margin-bottom: 160px;
+  text-align: center;
+}
+
+.footer-login {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.lista-pontos {
+  margin-top: 1.5rem !important;
+}
+
+.nav-plante-facil {
+  background-color: #c2f0c2!important;
+}
+
+.cupom-link-image {
+  height: 261px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.row-side-panel {margin-top: 20px;}

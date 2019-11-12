@@ -1,0 +1,72 @@
+/* Tela de capa para os usuarios*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    padding:10px 0 60px 0;
+}
+h3{
+    margin: 10px;
+}
+h4{
+    text-align: center;
+}
+p{
+    margin: 10px;
+
+}
+header{
+    background: rgba(91, 172, 91, 0.349);
+}
+body{
+    width: 100%;
+}
+
+.container{
+    /* text-align: center;
+    padding: 30px;
+    margin: 10px; */
+    /* background-color: azure; */
+}
+.função{
+    padding: 30px;
+}
+#texto{
+    text-align: center;
+    padding: 80px 50px;
+    width: 210px;
+    height: 215px;
+    float: right;
+}
+#rodapé{
+    background-color:  rgba(7, 92, 7, 0.479);
+}
+#principal{
+    background-image: url('../images/sobre1.jpg');
+    clear: both;
+    background-size: 100%;
+    min-height: 500px;
+    padding: 250px 0px 100px;
+}
+#secundario{
+    background-image: url('../images/sobre2.jpg');
+    clear: both;
+    background-size: 100%;
+    min-height: 200px;
+    padding: 80px;
+}
+.divisao{
+    margin: 30px;
+    color: #2E8B57;
+    /*text-shadow: 0.1em 0.05em 0.1em #333;*/
+}
+footer{
+    height: 60px;
+    padding: 30px;
+    clear: both;
+    font-size: 15px;
+    color: rgba(91, 172, 91, 0.349);
+    /*text-shadow:  0.1em 0.1em 0.2em #333;*/
+}
