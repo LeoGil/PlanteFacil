@@ -32,7 +32,7 @@ document.write(`
                 <a class="nav-link" href="contato.html">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.html">Sair</a>
+                <a class="nav-link" href="index.html">Sair</a>
             </li>
         </ul>
     </div>
