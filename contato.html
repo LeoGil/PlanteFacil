@@ -29,25 +29,25 @@
             <div class="col-lg-8">
                 <h2 class="font-italic text-center">Entre em contato conosco</h2>
                 <hr>
-                <form action="home.html">
+                <form id="form_contato" action="home.html">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Endereço de email</label>
+                        <label for="exampleFormControlInput1">Endereço de email <a class="text-danger">*</a></label>
                         <input type="email" class="form-control" id="exampleFormControlInput1"
                             placeholder="nome@exemplo.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputNome">Nome</label>
+                        <label for="inputNome">Nome <a class="text-danger">*</a></label>
                         <input type="text" class="form-control" id="inputNome" placeholder="Nome completo" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Escreva sua mensagem</label>
+                        <label for="exampleFormControlTextarea1">Insira a sua mensagem <a class="text-danger">*</a></label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary float-right btn-lg btn-block">Enviar</button>
+                    <button id="enviar" type="submit" class="btn btn-primary float-right btn-lg btn-block">Enviar</button>
                 </form>
 
             </div>
-            <!-- /.col-lg-9 -->
+            <!-- /.col-lg-9 --> 
         </div>
         <!-- /.row -->
     </div>
@@ -71,7 +71,7 @@
 
             $('#span_saldo').html(localStorage.saldo)
         } else {
-            alert('Voc� n�o possu� pontos sulficientes')
+            alert('Você não possuí pontos sulficientes')
         }
     })
 
@@ -82,4 +82,7 @@
     }
   // localStorage.setItem('saldo', 10000)
   // $('#span_saldo').html(localStorage.saldo)
+    $("#form_contato").submit(function() {
+        alert('Obrigado pelo contato!\nAssim que possível iremos te responder :)')
+    })
 </script>
