@@ -10,14 +10,14 @@ document.write(`
     <span class="navbar-toggler-icon"></span>
 </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto font-weight-bold">
         ${isUsuario ?
         `<li class="nav-item">
                 <a class="nav-link navbar-brand" href="cupons.html"><b>Seu saldo: <span class="badge badge-pill badge-primary"><span id="span_saldo"></span></span></b></a>
             </li>` : ''}
             ${!isUsuario ?
         `<li class="nav-item">
-                        <a class="nav-link" href="admin_index.html">Area administrativa</a>
+                        <a class="nav-link" href="admin_index.html">Administrativo</a>
                     </li>` : ''}
             <li class="nav-item">
                 <a class="nav-link" href="mapa.html">Mapa</a>
