@@ -30,13 +30,15 @@
         <div class="row">
             <div class="col-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                        aria-controls="v-pills-home" aria-selected="true"
-                        onclick="loadPage('lista_usuario.html'), setTimeout(fn_table_usuarios, 0500);"><i
+                    <a class="nav-link active" id="v-pills-usuario" data-toggle="pill" href="#v-pills-usuario"
+                        role="tab" aria-controls="v-pills-home" aria-selected="true"
+                        onclick="loadPage('admin/lista_usuario.html'), setTimeout(fn_table_usuarios, 800);"><i
                             class="fas fa-users"></i>
                         Usuarios</a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                        aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-shopping-cart"></i>
+                    <a class="nav-link" id="v-pills-produto" data-toggle="pill" href="#v-pills-produto" role="tab"
+                        aria-controls="v-pills-produto" aria-selected="false"
+                        onclick="loadPage('admin/lista_produto.html'), setTimeout(fn_table_produtos, 800);"><i
+                            class="fas fa-shopping-cart"></i>
                         Produtos</a>
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
                         aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-tags"></i>
@@ -60,6 +62,9 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+        integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"></script>
+
 
 
 </body>
@@ -75,6 +80,8 @@
         $('#span_saldo').html(localStorage.saldo)
     }
 
+
+    // SCRIPT PARA A LISTAGEM DOS USUARIOS
     var dataSet = [
         ["Super usuário", "Administrador", "admin@admin.com"],
         ["Suporte", "Suporte", "suporte@admin.com"],
@@ -82,14 +89,17 @@
 
     // var names = [];
     // names[0] = prompt("New member name?");
-    localStorage.setItem("names", JSON.stringify(dataSet));
+    localStorage.setItem("usuarios", JSON.stringify(dataSet));
 
     //...
-    var storedNames = JSON.parse(localStorage.getItem("names"));
+    var storedUsuarios = JSON.parse(localStorage.getItem("usuarios"));
 
     var fn_table_usuarios = function () {
         $('#dataTableUsuario').DataTable({
-            data: storedNames,
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+            },
+            data: storedUsuarios,
             columns: [
                 { title: "Nome" },
                 { title: "Cargo" },
@@ -98,5 +108,61 @@
         });
     }
 
-    $('#v-pills-home-tab').click();
+    var fn_form_admin_submit = function (form_id, modal_id, pill_id) {
+        $(`#${form_id}`).submit(function () {
+            $(`#${modal_id}`).modal('toggle')
+            $(`#${modal_id} input`).val('')
+            $(`#${modal_id} select`).val('')
+
+            $(`#${pill_id}`).click()
+
+
+            if (form_id == 'cadastro_admin') {
+                $("#alert_usuario").fadeTo(7000, 500).slideUp(500, function () {
+                    $("#alert_usuario").slideUp(500);
+                });
+            } else if (form_id == 'cadastro_produto') {
+                $("#alert_produto").fadeTo(7000, 500).slideUp(500, function () {
+                    $("#alert_produto").slideUp(500);
+                });
+            }
+        })
+    }
+    // $('#v-pills-usuario').click();
+
+    // SCRIPT PARA A LISTAGEM DOS
+    $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+    var dataProdutos = [
+        ["Ipê-branco", "100", "300", "R$24.99"],
+        ["Ipê-amarelo", "500", "240", "R$24.99"],
+        ["Aroeira-vermelha", "100", "229", "R$24.99"],
+        ["Jacarandá de Minas", "1000", "230", "R$24.99"],
+        ["Pata de Vaca", "100", "367", "R$24.99"],
+        ["Sibipiruna", "500", "587", "R$24.99"],
+    ];
+
+    // var names = [];
+    // names[0] = prompt("New member name?");
+    localStorage.setItem("usuarios", JSON.stringify(dataProdutos));
+
+    //...
+    var storedProdutos = JSON.parse(localStorage.getItem("usuarios"));
+
+    var fn_table_produtos = function () {
+        $('#dataTableProduto').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+            },
+            data: storedProdutos,
+            columns: [
+                { title: "Nome" },
+                { title: "Pontos" },
+                { title: "Quantidade disponível" },
+            ]
+        });
+    }
+
 </script>

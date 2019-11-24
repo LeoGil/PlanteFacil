@@ -10,6 +10,10 @@
                     usuário</a>
             </div>
         </div>
+        <div class="alert alert-success" id="alert_usuario" role="alert" style="display: none;">
+            <i class="fas fa-check"></i>
+            Usuário cadastrado com sucesso!
+        </div>
         <hr>
         <div class="row">
             <div class="col-lg-12">
@@ -18,8 +22,8 @@
         </div>
         <!-- </div> -->
     </div>
-    <div class="modal fade novo-usuario-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
+    <div class="modal fade novo-usuario-modal-lg" id="modal_novo_admin" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -28,7 +32,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="home.html">
+                <form id="cadastro_admin">
                     <div class="modal-body">
 
                         <div class="form-row">
@@ -44,12 +48,15 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md">
                                 <label for="inputCargo">Cargo</label>
-                                <input type="text" class="form-control" id="inputCargo" placeholder="Cargo do usuário"
-                                    required>
+                                <select class="form-control" id="inputCargo" required>
+                                    <option value="" selected>Escolher...</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Suporte</option>
+                                </select>
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md">
                                 <label for="inputPassword4">Senha</label>
                                 <input type="password" class="form-control" id="inputPassword4"
                                     placeholder="Senha para acesso" required>
@@ -60,7 +67,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                        <button type="submit" class="btn btn-success"
+                            onclick="fn_form_admin_submit('cadastro_admin','modal_novo_admin')">Cadastrar</button>
                     </div>
                 </form>
             </div>
@@ -71,3 +79,7 @@
         src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 
 </section>
+
+<script>
+
+</script>
