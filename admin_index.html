@@ -30,21 +30,25 @@
         <div class="row">
             <div class="col-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-usuario" data-toggle="pill" href="#v-pills-usuario"
+                    <a class="nav-link active link-grow" id="v-pills-usuario" data-toggle="pill" href="#v-pills-usuario"
                         role="tab" aria-controls="v-pills-home" aria-selected="true"
-                        onclick="loadPage('admin/lista_usuario.html'), setTimeout(fn_table_usuarios, 800);"><i
+                        onclick="loadPage('admin/lista_usuario.html'), setTimeout(fn_table_usuarios, 500);"><i
                             class="fas fa-users"></i>
                         Usuarios</a>
-                    <a class="nav-link" id="v-pills-produto" data-toggle="pill" href="#v-pills-produto" role="tab"
-                        aria-controls="v-pills-produto" aria-selected="false"
-                        onclick="loadPage('admin/lista_produto.html'), setTimeout(fn_table_produtos, 800);"><i
+                    <a class="nav-link link-grow" id="v-pills-produto" data-toggle="pill" href="#v-pills-produto"
+                        role="tab" aria-controls="v-pills-produto" aria-selected="false"
+                        onclick="loadPage('admin/lista_produto.html'), setTimeout(fn_table_produtos, 500);"><i
                             class="fas fa-shopping-cart"></i>
                         Produtos</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                        aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-tags"></i>
+                    <a class="nav-link link-grow" id="v-pills-cupons" data-toggle="pill" href="#v-pills-cupons"
+                        role="tab" aria-controls="v-pills-cupons" aria-selected="false"
+                        onclick="loadPage('admin/lista_cupom.html'), setTimeout(fn_table_cupons, 500);"><i
+                            class="fas fa-tags"></i>
                         Cupons</a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-                        aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-tree"></i>
+                    <a class="nav-link link-grow" id="v-pills-plantar" data-toggle="pill" href="#v-pills-plantar"
+                        role="tab" aria-controls="v-pills-plantar" aria-selected="false"
+                        onclick="loadPage('admin/lista_plantar.html'), setTimeout(fn_table_plantar, 500);"><i
+                            class="fas fa-tree"></i>
                         Plantar árvore</a>
                 </div>
             </div>
@@ -72,6 +76,8 @@
 </html>
 <script src="js/script.js"></script>
 <script>
+    $('#alert_usuario').hide()
+    $('#alert_produto').hide()
 
     if (localStorage.saldo == undefined) {
         localStorage.setItem('saldo', 0)
@@ -109,32 +115,34 @@
     }
 
     var fn_form_admin_submit = function (form_id, modal_id, pill_id) {
-        $(`#${form_id}`).submit(function () {
+        $(`#${form_id}`).submit(function (e) {
+            e.preventDefault()
+            // $(`#${form_id}`).preven
+            $(`#${modal_id} *`).val('')
             $(`#${modal_id}`).modal('toggle')
-            $(`#${modal_id} input`).val('')
-            $(`#${modal_id} select`).val('')
 
             $(`#${pill_id}`).click()
 
 
             if (form_id == 'cadastro_admin') {
-                $("#alert_usuario").fadeTo(7000, 500).slideUp(500, function () {
-                    $("#alert_usuario").slideUp(500);
-                });
+                let show_alert = function () {
+                    $("#alert_usuario").fadeTo(7000, 500).slideUp(500, function () {
+                        $("#alert_usuario").slideUp(500);
+                    });
+                }
+                setTimeout(show_alert, 1000)
             } else if (form_id == 'cadastro_produto') {
-                $("#alert_produto").fadeTo(7000, 500).slideUp(500, function () {
-                    $("#alert_produto").slideUp(500);
-                });
+                let show_alert = function () {
+                    $("#alert_produto").fadeTo(7000, 500).slideUp(500, function () {
+                        $("#alert_produto").slideUp(500);
+                    });
+                }
+                setTimeout(show_alert, 1000)
             }
         })
     }
-    // $('#v-pills-usuario').click();
 
-    // SCRIPT PARA A LISTAGEM DOS
-    $(".custom-file-input").on("change", function () {
-        var fileName = $(this).val().split("\\").pop();
-        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-    });
+    // SCRIPT PARA A LISTAGEM DOS PRODUTOS
     var dataProdutos = [
         ["Ipê-branco", "100", "300", "R$24.99"],
         ["Ipê-amarelo", "500", "240", "R$24.99"],
@@ -146,10 +154,10 @@
 
     // var names = [];
     // names[0] = prompt("New member name?");
-    localStorage.setItem("usuarios", JSON.stringify(dataProdutos));
+    localStorage.setItem("produtos", JSON.stringify(dataProdutos));
 
     //...
-    var storedProdutos = JSON.parse(localStorage.getItem("usuarios"));
+    var storedProdutos = JSON.parse(localStorage.getItem("produtos"));
 
     var fn_table_produtos = function () {
         $('#dataTableProduto').DataTable({
@@ -161,8 +169,42 @@
                 { title: "Nome" },
                 { title: "Pontos" },
                 { title: "Quantidade disponível" },
+                { title: "Valor" },
             ]
         });
     }
+
+    // SCRIPT PARA A LISTAGEM DOS CUPONS
+    var dataCupons = [
+        ["10% OFF Riachuelo", "100", "300"],
+        ["R$20 Lime", "500", "145"],
+        ["50% OFF Riachuelo", "500", "544"],
+        ["10% OFF Marisa", "100", "651"],
+        ["Ingresso Cinépolis", "500", "211"],
+        ["Sem Parar", "1000", "11"],
+    ];
+
+    // var names = [];
+    // names[0] = prompt("New member name?");
+    localStorage.setItem("cupons", JSON.stringify(dataCupons));
+
+    //...
+    var storedCupons = JSON.parse(localStorage.getItem("cupons"));
+
+    var fn_table_cupons = function () {
+        $('#dataTableCupons').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+            },
+            data: storedCupons,
+            columns: [
+                { title: "Nome" },
+                { title: "Pontos" },
+                { title: "Quantidade disponível" },
+            ]
+        });
+    }
+
+    $('#v-pills-usuario').click();
 
 </script>

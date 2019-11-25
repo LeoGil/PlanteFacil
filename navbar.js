@@ -17,22 +17,22 @@ document.write(`
             </li>` : ''}
             ${!isUsuario ?
         `<li class="nav-item">
-                        <a class="nav-link" href="admin_index.html">Administrativo</a>
+                        <a class="nav-link link-grow" href="admin_index.html">Administrativo</a>
                     </li>` : ''}
             <li class="nav-item">
-                <a class="nav-link" href="mapa.html">Mapa</a>
+                <a class="nav-link link-grow" href="mapa.html">Mapa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="cupons.html">Cupons</a>
+                <a class="nav-link link-grow" href="cupons.html">Cupons</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="sobre_nos.html">Nossa idéia</a>
+                <a class="nav-link link-grow" href="sobre_nos.html">Nossa idéia</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
+                <a class="nav-link link-grow" href="contato.html">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Sair</a>
+                <a class="nav-link link-grow" href="index.html">Sair</a>
             </li>
         </ul>
     </div>

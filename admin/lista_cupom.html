@@ -9,35 +9,35 @@
         <!-- <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="float-left">Cadastrar Produtos</h2>
+                <h2 class="float-left">Cadastrar Cupom</h2>
                 <a href="" class="btn btn-primary float-right" data-toggle="modal"
                     data-target=".novo-usuario-modal-lg"><i class="fas fa-plus"></i> Novo
-                    produto</a>
+                    cupom</a>
             </div>
         </div>
         <div class="alert alert-success" id="alert_produto" role="alert" style="display: none;">
             <i class="fas fa-check"></i>
-            Produto cadastrado com sucesso!
+            Cupom cadastrado com sucesso!
         </div>
         <hr>
         <div class="row">
             <div class="col-lg-12">
-                <table id="dataTableProduto" class="display" style="width:100%"></table>
+                <table id="dataTableCupons" class="display" style="width:100%"></table>
             </div>
         </div>
         <!-- </div> -->
     </div>
-    <div class="modal fade novo-usuario-modal-lg" id="modal_novo_produto" tabindex="-1" role="dialog"
+    <div class="modal fade novo-usuario-modal-lg" id="modal_novo_cupom" tabindex="-1" role="dialog"
         aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Novo produto</h5>
+                    <h5 class="modal-title">Novo cupom</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form id="cadastro_produto">
+                <form id="cadastro_cupom">
                     <div class="modal-body">
                         <div class="form-row">
                             <div class="form-group col-md">
@@ -45,32 +45,20 @@
                                 <input type="text" class="form-control" id="inputNome" required>
                             </div>
                             <div class="form-group col-md">
-                                <label for="inputNomeCompleto">Nome completo</label>
-                                <input type="text" class="form-control" id="inputNomeCompleto"
-                                    placeholder="Nome completo" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md">
                                 <label for="inputPontos">Pontos</label>
                                 <input type="number" min="1" class="form-control" id="inputPontos"
-                                    placeholder="Pontos por compra" required>
+                                    placeholder="Quantidade de pontos para resgatar" required>
                             </div>
                             <div class="form-group col-md">
                                 <label for="inputQuantidade">Quantidade</label>
                                 <input type="number" min="1" class="form-control" id="inputQuantidade"
                                     placeholder="Quantidade disponível" required>
                             </div>
-                            <div class="form-group col-md">
-                                <label for="inputValor">Valor</label>
-                                <input type="number" min="1" class="form-control" id="inputValor"
-                                    placeholder="Valor do produto" required>
-                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md">
                                 <label for="inputDescricao">Descriçāo</label>
-                                <textarea class="form-control" placeholder="Descriçāo do produto" id="inputDescricao"
+                                <textarea class="form-control" placeholder="Descriçāo do cupom" id="inputDescricao"
                                     rows="2" required></textarea>
                             </div>
                         </div>
@@ -79,7 +67,7 @@
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="inputGroupFile02" required>
                                     <label class="custom-file-label" for="inputGroupFile02"
-                                        aria-describedby="inputGroupFileAddon02">Foto do produto</label>
+                                        aria-describedby="inputGroupFileAddon02">Foto do cupom</label>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +77,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                         <button type="submit" class="btn btn-success"
-                            onclick="fn_form_admin_submit('cadastro_produto', 'modal_novo_produto', 'v-pills-produto')">Cadastrar</button>
+                            onclick="fn_form_admin_submit('cadastro_cupom', 'modal_novo_cupom', 'v-pills-cupom')">Cadastrar</button>
                     </div>
                 </form>
             </div>
