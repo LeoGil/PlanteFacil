@@ -28,10 +28,14 @@
     <script src="navbar.js"></script>
     <div style="min-height: calc(100vh - 100px);" class="mt-5 container-fluid">
         <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active link-grow" id="v-pills-usuario" data-toggle="pill" href="#v-pills-usuario"
-                        role="tab" aria-controls="v-pills-home" aria-selected="true"
+                    <a class="nav-link active link-grow" id="v-pills-dashboard" data-toggle="pill"
+                        href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true"
+                        onclick="loadPage('admin/dashboard.html')"><i class="fas fa-tachometer-alt"></i>
+                        Dashboard</a>
+                    <a class="nav-link link-grow" id="v-pills-usuario" data-toggle="pill" href="#v-pills-usuario"
+                        role="tab" aria-controls="v-pills-home" aria-selected="false"
                         onclick="loadPage('admin/lista_usuario.html'), setTimeout(fn_table_usuarios, 500);"><i
                             class="fas fa-users"></i>
                         Usuarios</a>
@@ -45,14 +49,9 @@
                         onclick="loadPage('admin/lista_cupom.html'), setTimeout(fn_table_cupons, 500);"><i
                             class="fas fa-tags"></i>
                         Cupons</a>
-                    <a class="nav-link link-grow" id="v-pills-plantar" data-toggle="pill" href="#v-pills-plantar"
-                        role="tab" aria-controls="v-pills-plantar" aria-selected="false"
-                        onclick="loadPage('admin/lista_plantar.html'), setTimeout(fn_table_plantar, 500);"><i
-                            class="fas fa-tree"></i>
-                        Plantar árvore</a>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-lg-9 col-md-9 col-sm-12">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div id="corpo_pill">
 
@@ -205,6 +204,6 @@
         });
     }
 
-    $('#v-pills-usuario').click();
+    $('#v-pills-dashboard').click();
 
 </script>
